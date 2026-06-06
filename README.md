@@ -1,11 +1,9 @@
-# about Larason website
- a website will showcase all about the Larason 
+# About Larason website
+ A website will showcase all about the Larason&trade; LLC
+* Available at [about.larason](https://about.larason.space)
 
-# hero section
-Pioneering open source technologies and bringing it at your fingertips, freely!
+# Todo
+Add links to images the original website instead of raw image files⏱️
 
-# body section
-a grid layout with two columns each with a laptop mockup showcasing the specific product with a few paragraphs for their explanation. the products are our free git hosting service Forgejo available at larason.space, our cloudpanel free host platform host.larason.space, private searxng instance at searxng.larason.space, codeer editor at codeer.larason.space, our free collaborative wiki platform at wiki.larason.space
-
-# footer
-the links to each of the service and a newsletter signup
+# Hosting
+This webiste was proudly hosted on Cloupanel server at [host.larason](host.larason.space). contact me at [davidkivuyo123@gmail.com](mailto:davidkivuyo123@gmail.com) for your free hosting and domain
