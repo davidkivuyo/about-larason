@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <!-- SEO & Metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Larason LLC | Pioneering Free Open Source Services</title>
+    <meta name="description" content="Larason LLC is an open-source pioneer dedicated to providing free, high-performance public services. Explore our Forgejo hosting, CloudPanel hosting, private SearXNG, Codeer editor, and collaborative wiki.">
+    <meta name="keywords" content="Larason, Larason LLC, open source, Forgejo, CloudPanel, SearXNG, Codeer, wiki, free hosting, privacy search">
+    <meta name="author" content="Larason LLC">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Larason LLC | Pioneering Free Open Source Services">
+    <meta property="og:description" content="An open-source pioneer providing free hosting, private search, web editor, and wiki services to the general public. No trackers, no ads.">
+    <meta property="og:image" content="img/forgejo.png">
+    
+    <!-- Theme Flash Prevention -->
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      })();
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="">
+    
+    <!-- Orange Boosted Framework Styles -->
+    <link rel="stylesheet" href="boosted/css/orange-helvetica.min.css">
+    <link rel="stylesheet" href="boosted/css/boosted.min.css">
+    
+    <!-- Bootstrap Icons for modern UI elements -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Custom Design & Animation Styles -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="tech-bg">
+    
+    <!-- Global Header (Navbar) - Always Dark Theme per Orange guidelines -->
+    <header class="sticky-top" data-bs-theme="dark">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-black py-3" aria-label="Global navigation">
+        <div class="container-xxl">
+          <!-- Brand Logo & Name -->
+          <a class="navbar-brand d-flex align-items-center" href="#home" id="navbar-brand-link">
+            <span class="title ms-3 fs-3 fw-bold text-white">Larason</span>
+          </a>
+          
+          <!-- Mobile Theme Switcher + Hamburger (Far Right Group) -->
+          <div class="d-flex align-items-center d-lg-none ms-auto">
+            <button class="btn btn-outline-light me-2 py-2 px-3 theme-toggle-btn" aria-label="Toggle theme" type="button">
+              <i class="bi bi-sun-fill theme-toggle-icon"></i>
+            </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#larasonNavbar" aria-controls="larasonNavbar" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+          
+          <!-- Navigation Menu -->
+          <div class="collapse navbar-collapse" id="larasonNavbar">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#home" id="nav-link-home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#services" id="nav-link-services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about" id="nav-link-about">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#newsletter" id="nav-link-newsletter">Newsletter</a>
+              </li>
+            </ul>
+            
+            <!-- Desktop Theme Switcher + Explore CTA -->
+            <div class="d-flex align-items-center mt-3 mt-lg-0 ms-lg-auto">
+              <button class="btn theme-toggle-btn me-3 d-none d-lg-inline-flex" id="themeToggler" aria-label="Toggle theme" type="button">
+                <i class="bi bi-sun-fill theme-toggle-icon"></i>
+              </button>
+              <a href="#services" class="btn btn-primary text-black fw-bold px-4" id="cta-header-explore">Explore Services</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+      
+      <!-- Hero Section -->
+      <section id="home" class="hero-section d-flex align-items-center">
+        <div class="hero-glow"></div>
+        <div class="container-xxl">
+          <div class="row align-items-center">
+            <div class="col-lg-10 col-xl-9 animate-fade-in">
+              <span class="custom-badge">Open Source Pioneer</span>
+              <h1 class="hero-title text-body">
+                Pioneering open source technologies and bringing it at your fingertips, <span class="hero-highlight">freely!</span>
+              </h1>
+              <p class="hero-subtitle">
+                At Larason LLC, we believe that software freedom, digital privacy, and open collaboration are fundamental public goods. We host, configure, and maintain high-performance open-source platforms, distributing them to the broad public at absolutely zero cost. No strings attached.
+              </p>
+              <div class="d-flex flex-wrap gap-3 mt-4">
+                <a href="#services" class="btn btn-primary btn-lg text-black fw-bold px-4 py-3" id="hero-btn-primary">View Free Platforms</a>
+                <a href="#about" class="btn btn-outline-primary btn-lg fw-bold px-4 py-3" id="hero-btn-secondary">Learn Our Philosophy</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Grid Section -->
+      <section id="services" class="py-6 border-bottom border-dark ">
+        <div class="container-xxl">
+          
+          <!-- Section Header -->
+          <div class="row mb-5 justify-content-center text-center reveal">
+            <div class="col-lg-8">
+              <span class="text-uppercase fw-bold text-primary tracking-wide fs-6">The Suite</span>
+              <h2 class="display-4 fw-bold text-body mt-2">Hosted Open Source Utilities</h2>
+              <p class="text-muted fs-5 mt-3">
+                Experience robust, self-hosted alternatives to commercial services. Safe, lightning fast, and privacy-respecting platforms hosted with premium infrastructure.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Services Grid (2 Columns) -->
+          <div class="row row-cols-1 row-cols-lg-2 g-5">
+            
+            <!-- 1. Forgejo Git Service -->
+            <div class="col reveal delay-1">
+              <article class="service-card">
+                <div class="card-img-wrapper">
+                  <img src="img/forgejo.png" alt="Forgejo Git Hosting Mockup" class="laptop-mockup-img" loading="lazy" />
+                </div>
+                <div class="card-body">
+                  <span class="custom-badge mb-3">Version Control</span>
+                  <h3 class="card-title text-body">Forgejo</h3>
+                  <a href="https://larason.space" target="_blank" class="service-url" id="service-url-forgejo">larason.space</a>
+                  <div class="card-text text-muted">
+                    <p>
+                      Forgejo is a lightweight, community-led software development platform. As a fully open-source fork of Gitea, it places software freedom and decentralization at the core of its mission. We provide this service freely to host your projects securely.
+                    </p>
+                    <p>
+                      Enjoy lightning-fast repository loading, integrated issue tracking, pull request workflows, and collaborative project management tools. Best of all, your repository data is safe, private, and free from corporate telemetry or usage limits.
+                    </p>
+                  </div>
+                  <div class="card-footer-action">
+                    <a href="https://larason.space" target="_blank" class="btn btn-primary text-black service-btn" id="service-btn-forgejo">
+                      Launch Forgejo <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- 2. CloudPanel Free Hosting -->
+            <div class="col reveal delay-2">
+              <article class="service-card">
+                <div class="card-img-wrapper">
+                  <img src="img/cloudpanel.png" alt="CloudPanel Hosting Mockup" class="laptop-mockup-img" loading="lazy" />
+                </div>
+                <div class="card-body">
+                  <span class="custom-badge mb-3">Web Hosting</span>
+                  <h3 class="card-title text-body">CloudPanel</h3>
+                  <a href="https://host.larason.space" target="_blank" class="service-url" id="service-url-cloudpanel">host.larason.space</a>
+                  <div class="card-text text-muted">
+                    <p>
+                      CloudPanel is a next-generation hosting control panel designed for raw speed, top-tier security, and server simplicity. It enables anyone to configure high-performance servers for PHP, Node.js, Python, and static sites in just a few clicks.
+                    </p>
+                    <p>
+                      Through host.larason.space, we offer a completely free control panel experience. Create databases, set up secure SSH/SFTP access, add subdomains, schedule cron jobs, and install Let's Encrypt SSL certificates without any expensive panel license fees.
+                    </p>
+                  </div>
+                  <div class="card-footer-action">
+                    <a href="https://host.larason.space" target="_blank" class="btn btn-primary text-black service-btn" id="service-btn-cloudpanel">
+                      Deploy on CloudPanel <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- 3. SearXNG Privacy Search -->
+            <div class="col reveal delay-1">
+              <article class="service-card">
+                <div class="card-img-wrapper">
+                  <img src="img/searxng.png" alt="SearXNG Search Mockup" class="laptop-mockup-img" loading="lazy" />
+                </div>
+                <div class="card-body">
+                  <span class="custom-badge mb-3">Privacy Search</span>
+                  <h3 class="card-title text-body">SearXNG</h3>
+                  <a href="https://searxng.larason.space" target="_blank" class="service-url" id="service-url-searxng">searxng.larason.space</a>
+                  <div class="card-text text-muted">
+                    <p>
+                      SearXNG is a privacy-respecting, hackable metasearch engine that aggregates results from over 70 search engines and databases. Crucially, SearXNG does not track search history, log user IP addresses, or build profiling files.
+                    </p>
+                    <p>
+                      Our public instance filters out tracking cookies and identifiers, returning completely unbiased, clean search results. Query pages across web search, images, videos, news, maps, and programming files safely, free from commercial profiling.
+                    </p>
+                  </div>
+                  <div class="card-footer-action">
+                    <a href="https://searxng.larason.space" target="_blank" class="btn btn-primary text-black service-btn" id="service-btn-searxng">
+                      Search Privately <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- 4. Codeer Web IDE -->
+            <div class="col reveal delay-2">
+              <article class="service-card">
+                <div class="card-img-wrapper">
+                  <img src="img/codeer.png" alt="Codeer IDE Mockup" class="laptop-mockup-img" loading="lazy" />
+                </div>
+                <div class="card-body">
+                  <span class="custom-badge mb-3">Web Editor</span>
+                  <h3 class="card-title text-body">Codeer</h3>
+                  <a href="https://codeer.larason.space" target="_blank" class="service-url" id="service-url-codeer">codeer.larason.space</a>
+                  <div class="card-text text-muted">
+                    <p>
+                      Codeer is a sleek, responsive, browser-based editor that turns any device into a lightweight development sandbox. It features rich syntax highlighting, auto-completion, and file management tools designed for developers on the move.
+                    </p>
+                    <p>
+                      Write, edit, and experiment with Javascript, HTML, CSS, or shell scripts instantly. Because it runs directly in your browser, you bypass complex installations—making it the ideal free tool for classroom learning, rapid prototyping, and quick edits.
+                    </p>
+                  </div>
+                  <div class="card-footer-action">
+                    <a href="https://codeer.larason.space" target="_blank" class="btn btn-primary text-black service-btn" id="service-btn-codeer">
+                      Open Codeer Editor <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- 5. Collaborative Wiki Platform -->
+            <div class="col reveal delay-1">
+              <article class="service-card">
+                <div class="card-img-wrapper">
+                  <img src="img/wiki.png" alt="Wiki Platform Mockup" class="laptop-mockup-img" loading="lazy" />
+                </div>
+                <div class="card-body">
+                  <span class="custom-badge mb-3">Documentation</span>
+                  <h3 class="card-title text-body">Collaborative Wiki</h3>
+                  <a href="https://wiki.larason.space" target="_blank" class="service-url" id="service-url-wiki">wiki.larason.space</a>
+                  <div class="card-text text-muted">
+                    <p>
+                      Our wiki hosting platform is a modern, collaborative knowledge manager engineered for open-source projects, teams, and communities. It supports robust Markdown syntax, dynamic page layouts, and customizable workspace channels.
+                    </p>
+                    <p>
+                      With features like full page version control, hierarchical sidebar navigation, and concurrent editing, your community can build knowledge bases, structure project guides, and document wikis with unmatched speed and absolute transparency.
+                    </p>
+                  </div>
+                  <div class="card-footer-action">
+                    <a href="https://wiki.larason.space" target="_blank" class="btn btn-primary text-black service-btn" id="service-btn-wiki">
+                      Explore Wiki <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- 6. Our Philosophy / Mission (Grid Balance Card) -->
+            <div class="col reveal delay-2">
+              <article class="service-card commitment-card">
+                <div class="card-img-wrapper d-flex flex-column align-items-center justify-content-center text-center p-4">
+                  <i class="bi bi-heart-fill text-primary" style="font-size: 5rem; text-shadow: 0 0 20px rgba(255, 121, 0, 0.4);"></i>
+                  <h4 class="mt-3 fw-bold">100% Free. Forever.</h4>
+                  <p class="text-muted px-3 fs-6">No premium tiers, paywalls, or personal data sales.</p>
+                </div>
+                <div class="card-body">
+                  <span class="custom-badge mb-3">Our Philosophy</span>
+                  <h3 class="card-title text-body">Open Source Commitment</h3>
+                  <span class="service-url">mission.larason.space</span>
+                  <div class="card-text text-muted">
+                    <p>
+                      We believe the internet's most critical utilities—code repositories, server control panels, search engines, and knowledge bases—should belong to everyone. We fund our servers independently so we never have to compromise our values.
+                    </p>
+                    <p>
+                      Larason LLC stands as a pioneer of the free web, demonstrating that premium hosted services can be provided sustainably without monetization, tracking scripts, or data brokers. Join us in building a freer, decentralized digital ecosystem.
+                    </p>
+                  </div>
+                  <div class="card-footer-action">
+                    <a href="#about" class="btn btn-outline-primary service-btn" id="service-btn-commitment">
+                      Read Our Mission <i class="bi bi-book ms-2"></i>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- About Us Section -->
+      <section id="about" class="py-6 border-bottom border-dark position-relative">
+        <div class="container-xxl">
+          <div class="row align-items-center g-5">
+            
+            <div class="col-lg-6 reveal">
+              <span class="custom-badge">Organization</span>
+              <h2 class="display-5 fw-bold text-body mt-2 mb-4">About Larason LLC</h2>
+              <p class="lead text-muted mb-4">
+                Larason LLC is an independent, non-commercial pioneer dedicated to deploying state-of-the-art open-source platforms for public benefit.
+              </p>
+              <p class="text-muted mb-4">
+                We believe that modern technology should be democratized. Too often, excellent open-source applications are either locked behind complex command-line setup routines, or centralized by commercial providers who profit off your activity and data.
+              </p>
+              <p class="text-muted mb-4">
+                By hosting pre-configured, production-ready instances of Forgejo, CloudPanel, SearXNG, Codeer, and wikis, we eliminate the deployment friction. We handle server administration, automated backups, SSL maintenance, and scaling, giving you premium-tier software completely free of cost.
+              </p>
+            </div>
+            
+            <div class="col-lg-6 reveal delay-2">
+              <div class="p-5 border rounded pillars-card position-relative">
+                <h3 class="fw-bold mb-4">Our Operational Pillars</h3>
+                
+                <div class="d-flex align-items-start mb-4">
+                  <div class="bg-primary text-black rounded-circle d-flex align-items-center justify-content-center p-3 me-3" style="width: 50px; height: 50px; flex-shrink: 0;">
+                    <i class="bi bi-shield-lock-fill fs-5"></i>
+                  </div>
+                  <div>
+                    <h4 class="h5 fw-bold mb-1">Privacy First Guarantee</h4>
+                    <p class="text-muted mb-0">We never log searches, inspect repositories, or harvest analytical data. Zero tracking, zero telemetry.</p>
+                  </div>
+                </div>
+                
+                <div class="d-flex align-items-start mb-4">
+                  <div class="bg-primary text-black rounded-circle d-flex align-items-center justify-content-center p-3 me-3" style="width: 50px; height: 50px; flex-shrink: 0;">
+                    <i class="bi bi-cpu-fill fs-5"></i>
+                  </div>
+                  <div>
+                    <h4 class="h5 fw-bold mb-1">High-Speed Architecture</h4>
+                    <p class="text-muted mb-0">Our services run on modern enterprise servers with NVMe SSDs and global content networks, ensuring raw speed.</p>
+                  </div>
+                </div>
+                
+                <div class="d-flex align-items-start">
+                  <div class="bg-primary text-black rounded-circle d-flex align-items-center justify-content-center p-3 me-3" style="width: 50px; height: 50px; flex-shrink: 0;">
+                    <i class="bi bi-code-slash fs-5"></i>
+                  </div>
+                  <div>
+                    <h4 class="h5 fw-bold mb-1">True Open Source Stack</h4>
+                    <p class="text-muted mb-0">We only use and support audited, community-governed open-source software. No vendor lock-in, ever.</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Newsletter Section -->
+      <section id="newsletter" class="py-6 bg-black" data-bs-theme="dark">
+        <div class="container-xxl reveal">
+          <div class="newsletter-box border border-dark rounded">
+            <div class="row align-items-center g-5">
+              
+              <div class="col-lg-6">
+                <span class="custom-badge mb-3">Newsletter</span>
+                <h2 class="display-6 fw-bold text-white mb-3">Stay Informed</h2>
+                <p class="text-muted mb-0 fs-5">
+                  Subscribe to receive updates on new service deployments, platform updates, security patches, and open-source tutorials. No spam, no marketing emails. Just tech updates twice a month.
+                </p>
+              </div>
+              
+              <div class="col-lg-6">
+                <form id="newsletterForm" class="needs-validation" novalidate>
+                  <div class="row g-3">
+                    <div class="col-md-8">
+                      <div class="form-floating">
+                        <input type="email" class="form-control" id="newsletterEmail" placeholder="name@example.com" required>
+                        <label for="newsletterEmail" class="text-muted">Email address</label>
+                        <div class="invalid-feedback">
+                          Please enter a valid email address.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <button type="submit" class="btn btn-primary text-black fw-bold w-100 h-100 py-3 text-uppercase" id="newsletterSubmitBtn">
+                        Subscribe
+                      </button>
+                    </div>
+                  </div>
+                  
+                  <div class="form-check mt-3 text-start">
+                    <input class="form-check-input" type="checkbox" value="" id="newsletterAgree" required>
+                    <label class="form-check-input-label text-muted small" for="newsletterAgree">
+                      I agree to receive open-source updates and accept the privacy policy.
+                    </label>
+                    <div class="invalid-feedback">
+                      You must agree to the terms to subscribe.
+                    </div>
+                  </div>
+                </form>
+                
+                <!-- Feedback Alert Notifications -->
+                <div class="alert alert-success mt-4 d-none" id="newsletterSuccess" role="alert">
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-check-circle-fill me-2 fs-5"></i>
+                    <div>
+                      <strong>Success!</strong> Thank you for subscribing. We've added you to the Larason newsletter.
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Global Footer - Always Dark Theme per Orange guidelines -->
+    <footer class="footer footer-custom" data-bs-theme="dark">
+      <h2 class="visually-hidden">Footer</h2>
+      <div class="container-xxl">
+        
+        <div class="row g-5">
+          
+          <!-- Column 1: Brand Info -->
+          <div class="col-lg-4">
+            <a class="footer-logo mb-3" href="#home">
+              <span>Larason</span>
+            </a>
+            <p class="text-muted mt-3 mb-4 pe-lg-4">
+              Larason LLC is a registered open-source advocate and service provider. We utilize, support, and host community technology platforms, offering them entirely free to the general public.
+            </p>
+            <div class="d-flex">
+              <a href="https://github.com" target="_blank" class="footer-social-link" aria-label="GitHub"><i class="bi bi-github"></i></a>
+              <a href="https://mastodon.social" target="_blank" class="footer-social-link" aria-label="Mastodon"><i class="bi bi-mastodon"></i></a>
+              <a href="https://matrix.org" target="_blank" class="footer-social-link" aria-label="Matrix"><i class="bi bi-chat-dots-fill"></i></a>
+              <a href="mailto:info@larason.space" class="footer-social-link" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+            </div>
+          </div>
+          
+          <!-- Column 2: Our Services -->
+          <div class="col-sm-6 col-lg-3 offset-lg-1">
+            <h3 class="footer-nav-title">Free Services</h3>
+            <ul class="footer-nav-links">
+              <li><a href="https://larason.space" target="_blank">Forgejo Git Hosting</a></li>
+              <li><a href="https://host.larason.space" target="_blank">CloudPanel Host</a></li>
+              <li><a href="https://searxng.larason.space" target="_blank">SearXNG Search</a></li>
+              <li><a href="https://codeer.larason.space" target="_blank">Codeer Editor</a></li>
+              <li><a href="https://wiki.larason.space" target="_blank">Collaborative Wiki</a></li>
+            </ul>
+          </div>
+          
+          <!-- Column 3: Contact & Info -->
+          <div class="col-sm-6 col-lg-4">
+            <h3 class="footer-nav-title">Get Involved</h3>
+            <p class="text-muted mb-3">
+              We welcome contributions, feedback, and support from developers and open-source advocates. Let's make the internet freer together.
+            </p>
+            <ul class="footer-nav-links">
+              <li><a href="#about"><i class="bi bi-info-circle me-2"></i>About Our Infrastructure</a></li>
+              <li><a href="#newsletter"><i class="bi bi-envelope me-2"></i>Join Mailing List</a></li>
+              <li><a href="mailto:support@larason.space"><i class="bi bi-question-circle me-2"></i>Get Support</a></li>
+            </ul>
+          </div>
+
+        </div>
+        
+        <!-- Bottom Terms Bar -->
+        <div class="footer-bottom">
+          <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start">
+              <span>&copy; 2026 Larason LLC. All rights reserved. Powered by Open Source.</span>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Service</a>
+              <a href="#" aria-label="Accessibility Statement">Accessibility Statement</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+    <!-- Orange Boosted Bundle JS (includes Popper) -->
+    <script src="boosted/js/boosted.bundle.min.js"></script>
+    
+    <!-- Site Logic, Scroll Animations, and Theme Switcher -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        
+        // 1. Theme Switcher Logic
+        const themeBtns = document.querySelectorAll('.theme-toggle-btn');
+        const themeIcons = document.querySelectorAll('.theme-toggle-icon');
+        const htmlElement = document.documentElement;
+
+        function updateThemeIcons(theme) {
+          themeIcons.forEach(icon => {
+            if (theme === 'dark') {
+              icon.className = 'bi bi-sun-fill theme-toggle-icon';
+            } else {
+              icon.className = 'bi bi-moon-fill theme-toggle-icon';
+            }
+          });
+        }
+
+        // Initialize icons based on current theme (already set in head script)
+        const activeTheme = htmlElement.getAttribute('data-bs-theme') || 'dark';
+        updateThemeIcons(activeTheme);
+
+        themeBtns.forEach(btn => {
+          btn.addEventListener('click', function() {
+            const current = htmlElement.getAttribute('data-bs-theme');
+            const target = current === 'dark' ? 'light' : 'dark';
+            
+            htmlElement.setAttribute('data-bs-theme', target);
+            localStorage.setItem('theme', target);
+            updateThemeIcons(target);
+          });
+        });
+
+        // 2. Reveal Elements on Scroll
+        const revealElements = document.querySelectorAll('.reveal');
+        
+        function checkReveal() {
+          const triggerBottom = window.innerHeight * 0.85;
+          
+          revealElements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            
+            if (elementTop < triggerBottom) {
+              element.classList.add('active');
+            }
+          });
+        }
+        
+        // Initial check and scroll event listener
+        checkReveal();
+        window.addEventListener('scroll', checkReveal);
+
+        // 3. Active Link Highlighting on Scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+        
+        window.addEventListener('scroll', function() {
+          let current = '';
+          const scrollPos = window.scrollY + 150; // offset for navbar height
+          
+          sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            
+            if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+              current = section.getAttribute('id');
+            }
+          });
+          
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            const href = link.getAttribute('href').substring(1);
+            if (href === current) {
+              link.classList.add('active');
+            }
+          });
+          
+          // Fallback to highlight Home when at the very top
+          if (window.scrollY < 50) {
+            navLinks.forEach(link => link.classList.remove('active'));
+            document.getElementById('nav-link-home').classList.add('active');
+          }
+        });
+
+        // 4. Newsletter Form Validation & Callback Interceptor
+        const newsletterForm = document.getElementById('newsletterForm');
+        const successAlert = document.getElementById('newsletterSuccess');
+        
+        newsletterForm.addEventListener('submit', function(event) {
+          event.preventDefault();
+          event.stopPropagation();
+          
+          if (newsletterForm.checkValidity()) {
+            // Hide input controls block animation or show success
+            successAlert.classList.remove('d-none');
+            successAlert.classList.add('animate-fade-in');
+            
+            // Clear inputs
+            document.getElementById('newsletterEmail').value = '';
+            document.getElementById('newsletterAgree').checked = false;
+            newsletterForm.classList.remove('was-validated');
+            
+            // Scroll to the alert message
+            successAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            
+            // Hide alert after 8 seconds
+            setTimeout(() => {
+              successAlert.classList.add('d-none');
+            }, 8000);
+          } else {
+            newsletterForm.classList.add('was-validated');
+          }
+        });
+
+      });
+    </script>
+  </body>
+</html>
