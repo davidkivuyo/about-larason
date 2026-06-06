@@ -1,6 +1,13 @@
 /* Import Helvetica Neue font definitions from Boosted */
 @import url('boosted/css/orange-helvetica.min.css');
 
+/* Chopic Font definition from local project folder */
+@font-face {
+  font-family: 'Chopic';
+  src: url('Chopic3DFreeVersionRegular-MVqvv.ttf') format('truetype');
+  font-display: swap;
+}
+
 /* Global Styles & Theme Variables */
 :root, [data-bs-theme=light] {
   --larason-orange: #f16e00; /* Boosted Brand Orange in Light Mode */
@@ -14,6 +21,8 @@
   --larason-pillar-bg: #ffffff;
   --larason-input-bg: #ffffff;
   --larason-shadow: rgba(0, 0, 0, 0.05);
+  --larason-3d-shade: #cc5a00;
+  --larason-3d-deep: #994300;
 }
 
 [data-bs-theme=dark] {
@@ -28,6 +37,8 @@
   --larason-pillar-bg: #141414;
   --larason-input-bg: #0d0d0d;
   --larason-shadow: rgba(255, 121, 0, 0.12);
+  --larason-3d-shade: #cc6100;
+  --larason-3d-deep: #803e00;
 }
 
 body {
@@ -86,12 +97,13 @@ body {
 }
 
 /* Header & Navigation */
-.navbar {
+[data-bs-theme="light"] .navbar {
   border-bottom: 1px solid var(--larason-border);
   transition: all 0.3s ease;
   z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.95) !important;
+  background-color: rgba(79, 77, 77, 0.95) !important;
   backdrop-filter: blur(10px);
+  color: rgb(0, 0, 0) !important;
 }
 
 .navbar-brand img {
@@ -129,6 +141,15 @@ body {
   transform: scaleX(1);
 }
 
+[data-bs-theme="dark"] .navbar{
+background-color: rgba(0, 0, 0, 0.95);
+  border-bottom: 1px solid var(--larason-border);
+  transition: all 0.3s ease;
+  color: rgb(255, 255, 255);
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
 /* Align hamburger toggler to the far right on small screens */
 @media (max-width: 991.98px) {
   .navbar-toggler {
@@ -156,7 +177,7 @@ body {
 }
 
 .hero-title {
-  font-size: clamp(2.5rem, 5vw, 4.2rem);
+  font-size: clamp(2.3rem, 4.5vw, 3.8rem);
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.05em;
@@ -169,13 +190,58 @@ body {
 }
 
 .hero-subtitle {
-  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
   color: var(--larason-text-muted);
   font-weight: 400;
   line-height: 1.6;
   max-width: 850px;
   margin-bottom: 2.5rem;
   transition: color 0.3s ease;
+}
+
+/* Styled Company Title in Chopic Font */
+.hero-logo-text {
+  font-family: 'Chopic', sans-serif;
+  font-size: clamp(4.5rem, 11vw, 8.5rem);
+  line-height: 1;
+  color: var(--larason-orange);
+  text-align: center;
+  user-select: none;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 0.05em;
+  /* Glowing 3D text effects */
+  text-shadow: 
+    0 1px 0 var(--larason-3d-shade), 
+    0 2px 0 var(--larason-3d-shade), 
+    0 3px 0 var(--larason-3d-deep), 
+    0 4px 0 var(--larason-3d-deep), 
+    0 5px 0 var(--larason-3d-deep), 
+    0 6px 1px rgba(0,0,0,.15), 
+    0 0 10px rgba(255,121,0,.15), 
+    0 1px 5px rgba(255,121,0,.25), 
+    0 5px 15px rgba(255,121,0,.2), 
+    0 10px 25px var(--larason-shadow);
+
+}
+
+@keyframes heroTextFloat {
+  0% {
+    transform: translateY(0) rotate(-1.5deg);
+  }
+  100% {
+    transform: translateY(-12px) rotate(1.5deg);
+    text-shadow: 
+      0 1px 0 var(--larason-3d-shade), 
+      0 2px 0 var(--larason-3d-shade), 
+      0 3px 0 var(--larason-3d-deep), 
+      0 4px 0 var(--larason-3d-deep), 
+      0 5px 0 var(--larason-3d-deep), 
+      0 6px 0 var(--larason-3d-deep), 
+      0 8px 3px rgba(0,0,0,.35), 
+      0 0 20px rgba(255,121,0,.35), 
+      0 12px 30px rgba(255,121,0,.45);
+  }
 }
 
 /* Service Card Design */
@@ -427,7 +493,6 @@ body {
 }
 
 .footer-social-link:hover {
-  background-color: var(--larason-orange);
   color: #000;
   transform: translateY(-3px);
 }
