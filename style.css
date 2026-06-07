@@ -492,14 +492,10 @@ background-color: rgba(0, 0, 0, 0.95);
 }
 
 .footer-bottom a {
-  color: #666;
+  color: #d7d4d4;
   text-decoration: none;
   margin-left: 1.5rem;
   transition: color 0.2s;
-}
-
-.footer-bottom a:hover {
-  color: #999;
 }
 
 /* Theme Toggler Button Style */
