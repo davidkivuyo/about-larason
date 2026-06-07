@@ -106,15 +106,6 @@ body {
   color: rgb(0, 0, 0) !important;
 }
 
-.navbar-brand img {
-  height: 2rem;
-  transition: transform 0.3s ease;
-}
-
-.navbar-brand:hover img {
-  transform: rotate(5deg) scale(1.05);
-}
-
 .navbar .nav-link {
   font-weight: 500;
   text-transform: uppercase;
@@ -258,12 +249,6 @@ background-color: rgba(0, 0, 0, 0.95);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
-.service-card:hover {
-  transform: translateY(-8px);
-  border-color: var(--larason-orange);
-  box-shadow: 0 15px 35px var(--larason-shadow);
-}
-
 .card-img-wrapper {
   position: relative;
   overflow: hidden;
@@ -272,6 +257,7 @@ background-color: rgba(0, 0, 0, 0.95);
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white ;
 }
 
 .laptop-mockup-img {
@@ -585,4 +571,13 @@ background-color: rgba(0, 0, 0, 0.95);
   .footer-bottom a {
     margin: 0 0.75rem;
   }
+}
+
+/* button */
+.button{
+  color: #fef9f9 !important;
+}
+
+[data-bs-theme="dark"] .button{
+color: #000000 !important;
 }
